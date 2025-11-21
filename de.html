@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://tiktok-app.shop/ -->
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="KreativDev">
+    <meta name="description" content="TikTok Shop">
+    <meta name="keywords" content="app landing, mobile landing, responsive, premium, retina, resume, jquery, css3, bootstrap">
+    <title>TikTok Shop</title>
+    <link rel="shortcut icon" href="https://tiktokfee.com/static/tkicon/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="en_files/bootstrap.min.css">
+    <link rel="stylesheet" href="en_files/all.min.css">
+    <link rel="stylesheet" href="en_files/flaticon.css">
+    <link rel="stylesheet" href="en_files/magnific-popup.min.css">
+    <link rel="stylesheet" href="en_files/swiper-bundle.min.css">
+    <link rel="stylesheet" href="en_files/nice-select.css">
+    <link rel="stylesheet" href="en_files/aos.min.css">
+    <link rel="stylesheet" href="en_files/animate.min.css">
+    <link rel="stylesheet" href="en_files/style.css">
+    <link rel="stylesheet" href="en_files/responsive.css">
+
+    <style>
+        .langImg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+        .langChange{
+            height: 0;
+        }
+        @media screen and (max-width: 1200px) {
+            .langChange {
+                width: 120px;
+                height: 0px;
+                position: fixed;
+                top: 60px;
+                overflow-y: scroll;
+                background-color: black;
+                z-index: 999;
+
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .langChange {
+                width: 120px;
+                position: fixed;
+                top: 100px;
+                right: 80px;
+                overflow-y: scroll;
+                background-color: black;
+                z-index: 999;
+
+            }
+        }
+
+        .ml10 {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body class="theme-color-1" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+    <div id="app">
+        <div id="preLoader" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        <header data-aos="fade-down" class="header-area aos-init aos-animate">
+            <div class="mobile-menu" style="display: none;">
+                <div class="container">
+
+                </div>
+            </div>
+            <div class="main-responsive-nav">
+                <div class="container">
+                    <div class="logo"><a href="#" target="_self" title="TikTok"><svg id="logo" width="126" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" class="D8SenkmRP95CH1WSbC6I jJpqH_AenM7E8YMNI21g">
+                                <path d="M87.822 17.389c.019.587.284 1.138.815 1.611.53.474 1.194.702 1.99.702 1.574 0 2.466-.834 2.636-1.915.094-1.29-.854-2.029-2.218-2.332l-1.688-.417c-2.123-.55-3.184-1.688-3.184-3.413 0-1.081.417-1.954 1.251-2.636.834-.702 1.82-1.042 2.977-1.042 1.214 0 2.218.36 3.014 1.061.797.702 1.195 1.612 1.195 2.768h-1.764c0-1.29-1.023-2.142-2.465-2.142-.663 0-1.232.19-1.725.55-.474.36-.721.833-.721 1.42 0 .91.626 1.518 1.858 1.821l1.706.418c2.483.626 3.735 2.047 3.489 4.095-.115.985-.57 1.801-1.346 2.445-.778.645-1.782.967-3.015.967-1.308 0-2.389-.398-3.261-1.176-.872-.796-1.308-1.725-1.308-2.786h1.764zM98.27 21.16h-1.725V7.493h1.726v6.143c.246-.493.644-.872 1.213-1.118.588-.266 1.157-.398 1.707-.398 2.217 0 3.602 1.441 3.583 3.925v5.119h-1.726v-5.005c0-1.441-.853-2.35-2.085-2.35-.701 0-1.327.208-1.877.644-.55.418-.815 1.062-.815 1.934v4.775zM107.376 13.388c.891-.854 1.991-1.27 3.299-1.27 1.309 0 2.408.417 3.299 1.27s1.346 1.953 1.346 3.317c0 1.366-.455 2.484-1.366 3.356-.89.854-1.99 1.29-3.28 1.29-1.289 0-2.389-.436-3.28-1.29-.891-.853-1.346-1.972-1.346-3.356.001-1.364.437-2.464 1.328-3.317zm5.367 1.214c-.551-.531-1.252-.797-2.067-.797-.815 0-1.517.266-2.085.797-.549.53-.834 1.232-.834 2.104 0 .891.285 1.612.834 2.161.569.55 1.27.815 2.085.815s1.517-.266 2.067-.815c.569-.55.853-1.27.853-2.16-.001-.873-.285-1.575-.853-2.105zM118.473 12.307v1.384c.588-.986 1.821-1.573 3.09-1.573 1.233 0 2.294.436 3.148 1.29.853.853 1.289 1.971 1.289 3.355 0 1.366-.436 2.465-1.289 3.318-.854.854-1.896 1.27-3.148 1.27-1.289 0-2.54-.53-3.09-1.517v5.63h-1.725V12.308h1.725zm.891 6.597a2.966 2.966 0 002.029.759c1.649 0 2.863-1.157 2.863-2.882 0-.872-.285-1.593-.834-2.142-.549-.55-1.214-.834-2.029-.834s-1.497.266-2.066.815c-.549.53-.834 1.252-.834 2.161-.001.892.284 1.612.871 2.123z" fill="currentColor"></path>
+                                <path d="M7.959 10.909v-.814a6.102 6.102 0 00-.818-.06A6.07 6.07 0 001.078 16.1a6.06 6.06 0 002.588 4.965 5.962 5.962 0 01-.084-.092c-.957-1.072-1.507-2.487-1.507-4.037a6.009 6.009 0 015.884-6.026z" fill="#25F4EE"></path>
+                                <path d="M8.102 19.728a2.811 2.811 0 002.788-2.689l.007-13.178 2.392.004-.005-.03A4.57 4.57 0 0113.206 3H9.911l-.006 13.203a2.77 2.77 0 01-2.764 2.666c-.463 0-.9-.116-1.285-.318.504.698 1.321 1.177 2.246 1.177zM17.79 8.37v-.786c-.92 0-1.777-.274-2.496-.743.639.735 1.509 1.318 2.496 1.53z" fill="#25F4EE"></path>
+                                <path d="M15.293 6.84a4.562 4.562 0 01-1.127-3.004h-.906c.233 1.255 1.001 2.332 2.033 3.005zM7.141 13.305a2.816 2.816 0 00-2.794 2.794c0 1.064.629 1.988 1.51 2.452a2.751 2.751 0 01-.525-1.615 2.773 2.773 0 012.77-2.77c.284 0 .558.048.816.129v-3.363a6.086 6.086 0 00-.817-.06c-.048 0-.095.003-.143.004l-.023.003-.002 2.54a2.554 2.554 0 00-.792-.114z" fill="#FE2C55"></path>
+                                <path d="M17.79 8.318l-.018-.004-.007 2.537a7.828 7.828 0 01-4.577-1.484l-.004 6.733a6.031 6.031 0 01-6.041 6.04 6.008 6.008 0 01-3.476-1.075A6.045 6.045 0 008.103 23a6.07 6.07 0 006.064-6.064V10.24a7.835 7.835 0 004.584 1.474V8.42c-.33 0-.652-.037-.961-.102z" fill="#FE2C55"></path>
+                                <path d="M13.206 16.1V9.403a7.834 7.834 0 004.584 1.474v-2.56a4.584 4.584 0 01-2.496-1.477 4.59 4.59 0 01-2.009-3.005h-2.413l-.006 13.203a2.77 2.77 0 01-2.764 2.666 2.765 2.765 0 01-2.245-1.155 2.77 2.77 0 011.285-5.221c.285 0 .56.047.818.128v-2.582a6.07 6.07 0 00-5.922 6.06c0 1.594.62 3.046 1.628 4.13a6.03 6.03 0 003.475 1.098 6.07 6.07 0 006.065-6.064zM21.84 8.05h9.757l-.896 2.792-2.531-.001v10.32h-3.155v-10.32l-3.173.006-.002-2.796zM47.58 8.05h9.984l-.897 2.792-2.751-.001v10.32h-3.159v-10.32l-3.173.006-.003-2.796zM32.192 12.22h3.129l-.004 8.942H32.21l-.019-8.941zM36.56 8.013h3.125v6.107l3.096-3.04h3.73l-3.918 3.802 4.388 6.279h-3.444l-2.928-4.355-.926.9v3.455h-3.124V8.013h.002zM69.671 8.013h3.124v6.107l3.097-3.04h3.73l-3.918 3.802 4.387 6.279h-3.443l-2.928-4.355-.927.9v3.455H69.67V8.013h.002zM33.755 11.199a1.574 1.574 0 100-3.148 1.574 1.574 0 000 3.148z" fill="currentColor"></path>
+                                <path d="M57.164 15.81a5.35 5.35 0 014.933-5.335 6.972 6.972 0 00-.47-.018 5.352 5.352 0 000 10.704c.142 0 .33-.007.47-.018a5.351 5.351 0 01-4.933-5.334z" fill="#25F4EE"></path>
+                                <path d="M63.312 10.457c-.142 0-.332.008-.473.018a5.351 5.351 0 010 10.668c.14.012.33.018.473.018a5.352 5.352 0 100-10.704z" fill="#FE2C55"></path>
+                                <path d="M62.467 10.457a5.352 5.352 0 100 10.704 5.352 5.352 0 000-10.704zm0 7.954a2.602 2.602 0 110-5.204 2.602 2.602 0 010 5.204z" fill="currentColor"></path>
+                            </svg></a></div>
+                    <div class="i18n" onclick="showLang()">
+                        <img src="cn_files/German.svg"> <span>German</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-navbar">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg"><a href="#" target="_self" title="TikTok" class="navbar-brand"><svg width="126" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" class="D8SenkmRP95CH1WSbC6I jJpqH_AenM7E8YMNI21g">
+                                <path d="M87.822 17.389c.019.587.284 1.138.815 1.611.53.474 1.194.702 1.99.702 1.574 0 2.466-.834 2.636-1.915.094-1.29-.854-2.029-2.218-2.332l-1.688-.417c-2.123-.55-3.184-1.688-3.184-3.413 0-1.081.417-1.954 1.251-2.636.834-.702 1.82-1.042 2.977-1.042 1.214 0 2.218.36 3.014 1.061.797.702 1.195 1.612 1.195 2.768h-1.764c0-1.29-1.023-2.142-2.465-2.142-.663 0-1.232.19-1.725.55-.474.36-.721.833-.721 1.42 0 .91.626 1.518 1.858 1.821l1.706.418c2.483.626 3.735 2.047 3.489 4.095-.115.985-.57 1.801-1.346 2.445-.778.645-1.782.967-3.015.967-1.308 0-2.389-.398-3.261-1.176-.872-.796-1.308-1.725-1.308-2.786h1.764zM98.27 21.16h-1.725V7.493h1.726v6.143c.246-.493.644-.872 1.213-1.118.588-.266 1.157-.398 1.707-.398 2.217 0 3.602 1.441 3.583 3.925v5.119h-1.726v-5.005c0-1.441-.853-2.35-2.085-2.35-.701 0-1.327.208-1.877.644-.55.418-.815 1.062-.815 1.934v4.775zM107.376 13.388c.891-.854 1.991-1.27 3.299-1.27 1.309 0 2.408.417 3.299 1.27s1.346 1.953 1.346 3.317c0 1.366-.455 2.484-1.366 3.356-.89.854-1.99 1.29-3.28 1.29-1.289 0-2.389-.436-3.28-1.29-.891-.853-1.346-1.972-1.346-3.356.001-1.364.437-2.464 1.328-3.317zm5.367 1.214c-.551-.531-1.252-.797-2.067-.797-.815 0-1.517.266-2.085.797-.549.53-.834 1.232-.834 2.104 0 .891.285 1.612.834 2.161.569.55 1.27.815 2.085.815s1.517-.266 2.067-.815c.569-.55.853-1.27.853-2.16-.001-.873-.285-1.575-.853-2.105zM118.473 12.307v1.384c.588-.986 1.821-1.573 3.09-1.573 1.233 0 2.294.436 3.148 1.29.853.853 1.289 1.971 1.289 3.355 0 1.366-.436 2.465-1.289 3.318-.854.854-1.896 1.27-3.148 1.27-1.289 0-2.54-.53-3.09-1.517v5.63h-1.725V12.308h1.725zm.891 6.597a2.966 2.966 0 002.029.759c1.649 0 2.863-1.157 2.863-2.882 0-.872-.285-1.593-.834-2.142-.549-.55-1.214-.834-2.029-.834s-1.497.266-2.066.815c-.549.53-.834 1.252-.834 2.161-.001.892.284 1.612.871 2.123z" fill="currentColor"></path>
+                                <path d="M7.959 10.909v-.814a6.102 6.102 0 00-.818-.06A6.07 6.07 0 001.078 16.1a6.06 6.06 0 002.588 4.965 5.962 5.962 0 01-.084-.092c-.957-1.072-1.507-2.487-1.507-4.037a6.009 6.009 0 015.884-6.026z" fill="#25F4EE"></path>
+                                <path d="M8.102 19.728a2.811 2.811 0 002.788-2.689l.007-13.178 2.392.004-.005-.03A4.57 4.57 0 0113.206 3H9.911l-.006 13.203a2.77 2.77 0 01-2.764 2.666c-.463 0-.9-.116-1.285-.318.504.698 1.321 1.177 2.246 1.177zM17.79 8.37v-.786c-.92 0-1.777-.274-2.496-.743.639.735 1.509 1.318 2.496 1.53z" fill="#25F4EE"></path>
+                                <path d="M15.293 6.84a4.562 4.562 0 01-1.127-3.004h-.906c.233 1.255 1.001 2.332 2.033 3.005zM7.141 13.305a2.816 2.816 0 00-2.794 2.794c0 1.064.629 1.988 1.51 2.452a2.751 2.751 0 01-.525-1.615 2.773 2.773 0 012.77-2.77c.284 0 .558.048.816.129v-3.363a6.086 6.086 0 00-.817-.06c-.048 0-.095.003-.143.004l-.023.003-.002 2.54a2.554 2.554 0 00-.792-.114z" fill="#FE2C55"></path>
+                                <path d="M17.79 8.318l-.018-.004-.007 2.537a7.828 7.828 0 01-4.577-1.484l-.004 6.733a6.031 6.031 0 01-6.041 6.04 6.008 6.008 0 01-3.476-1.075A6.045 6.045 0 008.103 23a6.07 6.07 0 006.064-6.064V10.24a7.835 7.835 0 004.584 1.474V8.42c-.33 0-.652-.037-.961-.102z" fill="#FE2C55"></path>
+                                <path d="M13.206 16.1V9.403a7.834 7.834 0 004.584 1.474v-2.56a4.584 4.584 0 01-2.496-1.477 4.59 4.59 0 01-2.009-3.005h-2.413l-.006 13.203a2.77 2.77 0 01-2.764 2.666 2.765 2.765 0 01-2.245-1.155 2.77 2.77 0 011.285-5.221c.285 0 .56.047.818.128v-2.582a6.07 6.07 0 00-5.922 6.06c0 1.594.62 3.046 1.628 4.13a6.03 6.03 0 003.475 1.098 6.07 6.07 0 006.065-6.064zM21.84 8.05h9.757l-.896 2.792-2.531-.001v10.32h-3.155v-10.32l-3.173.006-.002-2.796zM47.58 8.05h9.984l-.897 2.792-2.751-.001v10.32h-3.159v-10.32l-3.173.006-.003-2.796zM32.192 12.22h3.129l-.004 8.942H32.21l-.019-8.941zM36.56 8.013h3.125v6.107l3.096-3.04h3.73l-3.918 3.802 4.388 6.279h-3.444l-2.928-4.355-.926.9v3.455h-3.124V8.013h.002zM69.671 8.013h3.124v6.107l3.097-3.04h3.73l-3.918 3.802 4.387 6.279h-3.443l-2.928-4.355-.927.9v3.455H69.67V8.013h.002zM33.755 11.199a1.574 1.574 0 100-3.148 1.574 1.574 0 000 3.148z" fill="currentColor"></path>
+                                <path d="M57.164 15.81a5.35 5.35 0 014.933-5.335 6.972 6.972 0 00-.47-.018 5.352 5.352 0 000 10.704c.142 0 .33-.007.47-.018a5.351 5.351 0 01-4.933-5.334z" fill="#25F4EE"></path>
+                                <path d="M63.312 10.457c-.142 0-.332.008-.473.018a5.351 5.351 0 010 10.668c.14.012.33.018.473.018a5.352 5.352 0 100-10.704z" fill="#FE2C55"></path>
+                                <path d="M62.467 10.457a5.352 5.352 0 100 10.704 5.352 5.352 0 000-10.704zm0 7.954a2.602 2.602 0 110-5.204 2.602 2.602 0 010 5.204z" fill="currentColor"></path>
+                            </svg></a>
+                        <div class="more-option mobile-item">
+                            <div class="item">
+                                <div class="i18n" onclick="showLang()"><img src="cn_files/German.svg">
+                                    <span>German</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section data-bg-image="static/hero-banner-bg-1.png" class="hero-banner hero-banner-1 bg-cover bg-img bg-primary-light" style="background-image: url(&quot;static/hero-banner-bg-1.png&quot;); display: block;">
+            <div class="container">
+
+
+                <div class="langChange" id="langChange">
+                    <a href="cn.html" class="flex">
+                        <img src="cn_files/Chinese.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Chinese</span>
+                    </a>
+                    <a href="index.html" class="flex">
+                        <img src="en_files/English.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">English</span>
+                    </a>
+                    <a href="fr.html" class="flex">
+                        <img src="cn_files/French.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">French</span>
+                    </a>
+                    <a href="" class="flex">
+                        <img src="cn_files/German.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">German</span>
+                    </a>
+                    <a href="it.html" class="flex">
+                        <img src="cn_files/Italian.svg" alt="" class="langImg ml10"> <span class="ml10" style="color: white !important;">Italian</span>
+                    </a>
+                    <a href="es.html" class="flex">
+                        <img src="cn_files/Spanish.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Spanish</span>
+                    </a>
+                    <a href="ko.html" class="flex">
+                        <img src="cn_files/Korean.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Korean</span>
+                    </a>
+                    <a href="jp.html" class="flex">
+                        <img src="cn_files/Japanese.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Japanese</span>
+                    </a>
+                    <a href="ms.html" class="flex">
+                        <img src="cn_files/Malay.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Malay</span>
+                    </a>
+                    <a href="th.html" class="flex">
+                        <img src="cn_files/Thai.svg" alt="" class="langImg ml10"><span class="ml10" style="color: white !important;">Thai</span>
+                    </a>
+                </div>
+                <div class="row align-items-center gx-xl-5">
+                    <div class="col-lg-6">
+                        <div class="banner-content mb-40">
+                            <h1 data-aos="fade-up" data-aos-delay="100" class="title mb-30 color-primary aos-init aos-animate">TikTok Shop
+                            </h1>
+                            <h1 data-aos="fade-up" data-aos-delay="100" class="title mb-30 text-white aos-init aos-animate">das vollständig verwaltete
+                                Betriebsmodell der Plattform</h1>
+                            <p data-aos="fade-up" data-aos-delay="100" class="text aos-init aos-animate">Wir bieten
+                                Verbrauchern auf der ganzen Welt hochwertige Waren und Dienstleistungen an und
+                                unterstützen Händler umfassend, damit sie auf dem Weltmarkt schnell wachsen können
+                            </p>
+                            <div data-aos="fade-up" data-aos-delay="200" class="cta-btn mt-40 btn-groups aos-init aos-animate"><a onclick="goApp()" title="App Store" target="_blank" class="btn btn-img radius-md download-btn"><img src="en_files/app-store.png" data-src="assets/images/app-store.png" alt="App Store" class="blur-up lazyloaded"></a> <a onclick="goGo()" title="Play Store" target="_blank" class="btn btn-img radius-md download-btn"><img src="en_files/play-store.png" data-src="assets/images/play-store.png" alt="App Store" class="blur-up lazyloaded"></a></div>
+                            <div data-aos="fade-up" data-aos-delay="250" class="clients-avatar mt-40 aos-init aos-animate">
+                                <div class="client-img"><img src="en_files/avatar-1.jpg" data-src="assets/images/avatar-1.jpg" alt="Client Image" class="blur-up lazyloaded"> <img src="en_files/avatar-2.jpg" data-src="assets/images/avatar-2.jpg" alt="Client Image" class="blur-up lazyloaded"> <img src="en_files/avatar-3.jpg" data-src="assets/images/avatar-3.jpg" alt="Client Image" class="blur-up lazyloaded"> <img src="en_files/avatar-4.jpg" data-src="assets/images/avatar-4.jpg" alt="Client Image" class="blur-up lazyloaded"> <span>+999... </span></div> <span>Mehr als 50 000
+                                    Nutzer laden unsere App herunter</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="col-lg-6 aos-init aos-animate">
+                        <div class="banner-image"></div> <video src="./static/tiktok.mp4" autoplay="autoplay" muted="muted" loop="loop" poster="./static/poster.png" style="width: 100%;"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="counter-area counter-1 pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,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" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2">Entdecken</span>
+                                        <p class="card-text lh-1">Unterhaltung trifft auf Handel mit authentischen und
+                                            ansprechenden Shopping-Inhalten, die zum Kauf inspirieren</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,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" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2">Vertrauenswürdige
+                                            Kreative</span>
+                                        <p class="card-text lh-1">Designer präsentieren sich auf TikTok auf eine neue
+                                            Art und Weise, indem sie einen neuen Blick auf das Einkaufen werfen und
+                                            Marken dabei helfen, durch authentische Inhalte Vertrauen und Einfluss zu
+                                            gewinnen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,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" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2">Engaging
+                                            Communities</span>
+                                        <p class="card-text lh-1">TikTok Communities fördern die Entdeckung und
+                                            beeinflussen die Kultur. Marken können dauerhafte Beziehungen zu den Nutzern
+                                            aufbauen, indem sie diese bestehenden Gemeinschaften nutzen</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMEAAADACAMAAACKwPcLAAABMlBMVEUAAAAk8+0l9O79LFT+LFX8LVX+K1T/JFD/KFD+LFX+K1X+K1P/KFj+LFX+K1X/K1X8KlX7LFQl9O7+LFT9K1T9K1P9K1Ml9O//K1Yl9O4l9O4l9O0g7+/+LFQl9O8DFxck9O0k8+z/KlUg7+8l9O4j9O0m8+4BDAwKEBD/LFb/LFT6KlUo7+8g9+sMXl4AAAAm9e0AAAAk9O4AAAAj9e8LUFACEBAAAAACEREFJiQDGBj/LVb/LFYIPjsNY1wAAAAg7+8AAAB5JTg2gIMzb3P+K1VODhr/K1UfzMX8LVX/K1b/K1YAAAAj9e/+LFUl9O4AAAA/CxUg1dAHLi0UiYYbt7IXmZUEHx4OW1p/FioQa2gCDw8j5d8LTEoSencZp6MexsEJPTsCEBAJPj0QbGiBJTmyQaAKAAAATnRSTlMAgL+A72BwECDfr08gv96fYEDvz6CQj19f384wEL6fc29AMCDej6+vkH9AMCEgINqvoH9gTzDv79/PoJCAYFAwERDv39/dz86/YWBeUE47u/kAAAAFJklEQVR42u3c53rTMBQG4ENispNmdDcUaCl77733kEyTDpq07Pu/BQoPoMhyHavRZxye8/7jz6nU6HxHhhhijDHGGGOMMcYYY4wxxhhjbJj25Ytzc5mVozSm2ivyt4vLNI7Ozsm/mgs0fh7ubmC8t7AoNfOUXvnwMyQDZsiJ01nTbGFf6y6cPpidKLU8IUQ1pMQRGZAhF8oiTDG/n4VrarMUkJEBTXKhKkLVrRduOkW6ORl0DriDKdpTQS18iNy/3EGJ9lCvitg8/SzOyyDkKSpSqHxV2MjSoBUZMI/cgciHbqAlrHg06KiRptAdLFGISWGpEBVGx5ahO6iTaUnYaugjrWl8BMAdTI3+EZi/h4XBLRwgN0oifhh5wlZuz8tpc4YcyYnYYVQR1qYpaOZXM2QOtMmZbKv4hx5GdjuwGCvnzrUJpK6FkYsdvKCETUWHkbBWo4TlosOoKKxRwsrRR7glrBUoWZXoMCoJaw1KmCeUsDaxVqeEPX+vvMwEPXlv7WkmjsWH5MolX1mXQeu+tW8ylovkyklf2ZFBa761bRlLk1y54iubMmjVt9aRscyTKw98ZUMafBuqyHAr5Mojf4A0bPjWZCzvyJkbvrIqgzq+BVVkuDY5cyEyjLZ9a2vYNjBdigyjLd/aOrYNTIcjw6jrW9uRMVwlgsRpx8VI25QxLJM713ylhx9pqg0wcbqa0EhbJMVtGH10MNK+gNvAdMJXui5GWh/bBqbbWheCR5pqA1CcdpIZaYvk1FsjjOAj7So5dd44AfCRtkxu9fQwwo+0Y6Q4j9MueKSpNkDF6WYSI22GHDup/XTsSFNtgIrTXgIj7Ri5dl8LI+xIU20Ai9OP8JGm2gDzqNzFj7QFcu6mFkbokabaABOnHfhIO04KIk578JE2Q+5d0YIEPdIWyL0HWhhB/+JRtQEuTrujj7QOug1M17U2HHmkfZYRjhDCrahf4LbbebBACJeiwmjL6a2iSRCHo35+1+lAO04Q97QwGnEgfJXJtwFdiwqjfs9uA338NDC1I+8EOzZPN10ZqUkg16PCqL8Rb451NrfW+jLacQK5FfmYtroxZOHd9U+q/5NsA+W2+ZBobsF+4aajBHJ42CPWeufPwrctF45vAzNOw5uxv7a2tipHlCENKk63JMwRQmn3tItZfGlpA/1RuSeHSl0bEJ2ICCMlvW1AdHKvMBqTNlBxGgyjsWkDup9IGBHQeT+BMLpMTuVfZV8X1B8ff1C+H0C47PgMnfHErrvh343NU/pVPPHLbOi7EkuUfpPB7/nm9G+9pl8r+DXpsv5CS/oVg0e+or8GkX5TxusCYoA3Bq1sdDIVtQ+hQKl3piaE8HLaF/UBitWpMqGUs7m8dq5QvIkCJSEngBLZQ1kgFRsEVxFYpwjOE5ox3EJLgM0SiJoQYB64nYsCrkpIdRFqjM5RUVhL10ub+5oGqXphcFJovNJEyROa6sGhWkOLTBCM/pOm87Qrq6/HTRGUM2JQLvSqVAAUAbXBRPh/q1AHFAFdTMvha8q5KQKSNT5p87aXdVqEd/D/naKD4deXkrYmN0VAKjGCcAlQBDbR7uaJKH9ntIl2yq4I/lYx4aYITEMMU8YWwd+ua+Ai+CecWRdF3hDSIRGl5qLIM4KqeJEP6dgi+HOUQxYBXI4MWWwR/BZygCIgjZow1RqAIjCVSRE0nccWAezBE4o3XQAUgStPH6r9/OAPTTfy+y8y9bfIGPyzImOMMcYYY4wxxhhjjDHGGGOp9wMru77XzSXqDwAAAABJRU5ErkJggg==" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2">Einfaches und sicheres
+                                            Einkaufen</span>
+                                        <p class="card-text lh-1">Revolutionierung des Einkaufserlebnisses von der 'Für
+                                            Sie'-Seite über die sichere Bezahlung bis hin zur Bestellabwicklung und zum
+                                            Support - alles in der App</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="choose-area choose-1 ptb-60 bg-black">
+            <div class="container">
+                <div class="row align-items-center gx-xl-5">
+                    <div data-aos="fade-up" class="col-lg-6 aos-init aos-animate">
+                        <div class="image mb-40"><img src="en_files/choose-1.png" data-src="assets/images/choose-1.png" alt="Image" class="blur-up js-tilt lazyloaded">
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="col-lg-6 order-lg-first aos-init aos-animate">
+                        <div class="content-title mb-40">
+                            <h2 class="title mb-30 mt-0 text-white">
+                                Globaler Markt
+                            </h2>
+                            <div class="content-text">
+                                <p>
+                                    Die Tik Tok Shop-Plattform deckt viele Länder und Regionen der Welt ab und bietet
+                                    Händlern eine Plattform für den grenzüberschreitenden Verkauf, die ihnen hilft,
+                                    geografische Beschränkungen zu überwinden und den globalen Markt leicht zu erweitern
+                                </p>
+                            </div>
+                            <ul class="info-list list-unstyled mt-20">
+                                <li><i class="far fa-dot-circle"></i>
+                                    Die Plattform bietet umfassende Dienstleistungen für den grenzüberschreitenden
+                                    elektronischen Handel
+                                </li>
+                                <li><i class="far fa-dot-circle"></i>
+                                    Übersee-Lagerung Internationale Logistik Grenzüberschreitende Zahlung
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="counter-area counter-1 pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div data-aos="fade-up" class="section-title title-center mb-50 aos-init aos-animate">
+                            <h2 class="title mt-0"> Umfassendes Hosting</h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAALVBMVEVHcEz/LVX/MFT/K1T+LFX/LFX/MFD/LFX9LFT/LFX/LFT+K1X/LFX/LFb+LFUFPYBtAAAADnRSTlMA3yBa78cQpYCPQHAwfyggW2sAAANASURBVEjH7VVNaxNRFJ1kSJrUCCWigpRhpNEuBIn1A9wU1EWVSii17iSMuBAKQhEr1kVokW5LNyq4CAFXQpEK7gqlxYXb/oLANDOd1rT3N3jPnTefNA267l2E9r3z5p577rnvadpp/Fvk1/pjsnUq9wU9J6KdfqAGg2wzvvJiLI05Q2QQdWIrZ2v0KQWqkD1ikGOFC4N85iBVmkGH2hWiarjQ5PTUSoCKRIuaVsdPWIdj0IUEaJNc4bUaq2O6Ql5CpBpEqnB9QUV1msShalKkFngxqpr/tcFIw09/PwZq0r7w4nBn+OeJ1cB+BSSC0ImmhNcSqXDr2Of19bhIps/rBkWxCPpRPgNSZ8DrJ29e/FwX0CG4ukmRwGuA1fnCxX6UlCx7lG+cbMWrTfRWlmZv3hXRmkG+QCTbzBJd0rRXxoQpSv2J5cuIZuBVlAJYrrJfjYV8i0qkA8UrB7m2mY5TDZrUxPeEzBB48XcHyP6wLJUdRfls2OcyOZKjLIcR7w3hH+RbjYlU1fzuccpRcbIu+yv4Xkn+bIONBttxi7FDw9Cb93O+PuxZv3kc354uwI16DSoKHxaohaRl5pUcFF5g7sKnZPgCOevg9bs2EQHzcCbX30ETtuSQy0d0VbiKArh/J4dtAQ9nMZb0+HpqOm4RPRgXRabVIRkNO2CPdBa6U8POZMDSxn/rFdoLQO0j7aXyaED0a2sTqTO0G3wISVgs+41bTVwFZe6fp5byNS6ZxdpP6JJj0tnY9DNtz+SuJkBoSw4U1AjjwDn+nhWfYNilDZBQ1+/toOQFotR9Ae8Ob1PXT25zLn8W4pS6XJtjFn2qGajDxYXVKlCHG9XlvnumMsHrou/iKNi3PEJzDPT7x76yl8i7kyhukORa1UV47YcImUomE4NbVcjuZcnbgQTRtRc5g73awL3SLeGjhbCzsbg2TzZP09QguWMNMGNRjnk2Qlr2Bhd3PtUSFSshraNRHPCOAxUEJDY1ub89nqORZXLm6dE7Hma+pzzr+DdI1OqwrahOXavXS7UiNtgEdqjnc1ZgCXezsL+z1fvRm71NNINsz056GoXWfv7qyQ8oaM31e2V1gx72f9VLa9pp/Gf8BfiSdzsRUWA5AAAAAElFTkSuQmCC" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2"> Ein einziger Service
+                                            für die Haare</span>
+                                        <p class="card-text lh-1"> Beim One-Shipment-Service geht der Lieferant direkt
+                                            vom Lager zum Käufer, sodass der Verkäufer die Sendung nicht mehr
+                                            vorbereiten und versenden muss. Dieses Dienstleistungsmodell kann Verkäufern
+                                            helfen, die Lagerkosten zu senken und die Effizienz zu steigern.
+                                            Gleichzeitig muss die Zuverlässigkeit des Anbieters sichergestellt werden,
+                                            um die Qualität der Waren und die Einhaltung der Lieferfristen zu
+                                            gewährleisten</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAJ1BMVEVHcEz/K1X/KlH/LFX/LVX/LFT/LFX+K1X+LFX/MFD+LFT/KlX+LFWUcpwwAAAADHRSTlMAoiDB30Jgeu8QkDDE/LCIAAABsUlEQVRIx+VVq07EQBTtlme3piAQZMWCwawgqSMVhCAQCEwdYhMIBgQEi9gEQUgqKhAIBEEjkAjMQmkXcj+K6SOdR8901pHAcTM5mbn3nPuwrL+NNd/3tw7aOfY+MSTDVtI8FchaSQslic7bSHMV6bP1qauS9NFKcsIwPGasvkkGOyIaGsV6JlpeRxBJZ6TBWIjiTUcSBXzQkgQBZ/Wk25rUoSn+6xJNdgH2RJWZzWONaUl9cMWDTOIvOexzROpIpkbYPJZ1yk8BNu+Q6J2ferjs2LUnVZUHSHJ1sHc3cdnG/DggGsHkRPkWpQiFWyE5awa2AgviS344MyWXt9/YlJxskiY5y2a1YkoOm3cvJ1eYt6QiUMXr4eL10EhQIU833J7fcpCDKX7D7XnTLNTsRMEpEC41Dp9uI0o8hZNQxYtCclHgiepUgFhq3UM1R5qpL2FbM9AlNLraPvJVrPz+EnUuhCA2VvE6fSXaERsx1qyhJBa0fcQDko+yfDWDEZIPjbpgC79TPEVrS13d9i5equJwIs1eLnZ2n6/Jpr2VxfUPd6DkyhIOrmsBncvJk/Uv8AMcRu9Ko0z4rQAAAABJRU5ErkJggg==" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2"> Schnelle Eröffnung
+                                            eines Geschäfts</span>
+                                        <p class="card-text lh-1"> Die schnelle Geschäftseröffnung ist eine Möglichkeit,
+                                            ein Geschäft durch einen vereinfachten Prozess schnell einzurichten und zu
+                                            betreiben, und eignet sich für Start-ups und kleine Händler​</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAHlBMVEVHcEz/K1P/LVX+LFT/LFT/LFX/LFX/KlX+LFX+LFVDz6dBAAAACXRSTlMAH9+AP8CiYe9WVzICAAABBklEQVRIx+3Vuw6CMBQG4OINR4KXxM2VWd9AE+JGUBIdGTSOGl/AldFbwnlbQXqBUk6JTib8a78ObU/PIaQJFvNw1hsH7pbeAHg1DNxqGBxRgyJmMETNFkPUbFoIYoYgiBsECVNCw8uMRhgZDSIo5GMkZDgqIyFbaSS0KyJLhUyogXrJwpqdrgr1AR78DFVoAnCtg6YN+lukf+CkVJ5a1AWI58ss7k/lK/8oJSKrIgqVqBMplfTNR6BScsNY7IPAT1ZfQU6pWk8b0psfC1WNcgpBQmGIKxQxdUQRUzjiCkVM4YgqDcqUp0Gpikvj1ZR3jv2wNDCMpGBO2vFti9ZZHcO1SJPv8wZJal3KW+KdMwAAAABJRU5ErkJggg==" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2"> free stationing</span>
+                                        <p class="card-text lh-1"> Free Stationing ist eine Art kostenloser
+                                            Ladeneröffnungs- oder Registrierungsservice, der von der Plattform
+                                            bereitgestellt wird und es Händlern oder Einzelpersonen ermöglicht, ihre
+                                            Waren oder Dienstleistungen auf der Plattform anzubieten und zu verkaufen,
+                                            ohne dafür Gebühren zu zahlen​</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" class="col-sm-6 col-lg-3 mb-40 border-sm-end aos-init aos-animate">
+                                <div class="card text-center">
+                                    <div class="card-icon mx-auto color-primary mb-20"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIBAMAAACnw650AAAAJ1BMVEVHcEz/LFX/LFT+K1X/LFT/LFX/LFP+K1X+LFX/MFD9LFT/LFb+LFVJEHhVAAAADHRSTlMAv0BdoNwleO8QkK/TukQpAAABzklEQVRIx+2VvU4CQRDHV5Ajpw2bGGOQAjexMFpcYrQwFMagFYUmYGVxKmJjgR0kNDZWFCQ2lBJfQHsbhAunzkO5tx/H7nHuvcBNs5u9H7Mzs/MfEEot3uzHk2QoB1AvJ0F7AOAlOatAYHXXCA0ZBDMjlL3ilDmulxKDCuaoLObr2wx1IBk64DGdm5htzsCxgdkSjJbdbvFwkfFp0dWq0KOnN1dnxnSZKtAS/6Vwd82Z8gPAl/7m3AJ3TbbzHNTTk8tDaH6DLw5CtOavaot9gm5+lx7SVesC62gjyiBLT47Z7aivMcF1k5gnFe4Eg5p+O7bSgTuvm6gAqzWQ2dwQspMkKtYr62bojifhGCFRuuf5Sea00bg4U5mMKMfP/H7e9WrGK7Jm0QdWVbZK640xPYzoFXyavb1PzWXdQ/tEhYQSg/s6wuUiBGHb56RIYqFWqxLotSeji4XYtCmgvozOAGVCKRkgKhuvWqV5OGaIqqiWQin0P0RIj0O/hJQ4NCMkVghZuXOW5S6ESvKTLT+5ctaOo+L0XIlPkS0kMYkM+0CTYuBcIimu9/nAqDEdteVfIXWJ8szVdKAMmhHGm2xWZj8wXmOT6x5jXCyj1Jj9AZFRdeuBC2bCAAAAAElFTkSuQmCC" alt=""></div>
+                                    <div class="card-content"><span class="h3 font-medium mb-2"> Import von Waren mit
+                                            einem Klick​</span>
+                                        <p class="card-text lh-1"> Der Warenimport per Mausklick ist eine Funktion der
+                                            E-Commerce-Plattform, die es Verkäufern ermöglicht, Wareninformationen von
+                                            anderen Plattformen oder aus Dateien schnell in ihre eigenen Geschäfte zu
+                                            importieren, wodurch die Arbeitseffizienz erhöht und die Richtigkeit der
+                                            Informationen sichergestellt wird​​</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="screenshot-area pt-60 bg-black">
+            <div class="container-fluid px-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div data-aos="fade-up" class="section-title title-center mb-50 aos-init aos-animate">
+                            <h2 class="title mt-0 text-white">Ein professionelles Kundenserviceteam und ein
+                                Kundendienst​</h2> <span class="subtitle color-primary mt-30 mb-30">Unterstützung des
+                                Kundendienstes​</span> <span class="subtitle title" style="display: block;">Die
+                                TikTok-Verkaufsplattform bietet einen umfassenden Kundendienst, der Rücksendungen von
+                                Produkten, Anfragen zu Bestellungen, logistische Nachverfolgung usw. umfasst​</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div data-aos="fade-up" class="zone-swiper screenshot-slider-1 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden aos-init aos-animate">
+                            <div id="swiper-wrapper-e915155cd5702f0e" aria-live="off" class="swiper-wrapper" style="cursor: grab; transform: translate3d(-1915px, 0px, 0px); transition-duration: 0ms;">
+                                <div role="group" aria-label="1 / 2" class="swiper-slide swiper-slide-prev" style="width: 1915px;">
+                                    <div class="lazy-container ratio ratio-16-11"><img src="en_files/screenshot-lg-1.png" data-src="assets/images/screenshot-lg-1.png" alt="Image" class=" lazyloaded"></div>
+                                </div>
+                                <div role="group" aria-label="2 / 2" class="swiper-slide swiper-slide-active" style="width: 1915px;">
+                                    <div class="lazy-container ratio ratio-16-11"><img src="en_files/screenshot-lg-2.png" data-src="assets/images/screenshot-lg-2.png" alt="Image" class=" lazyloaded"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar swiper-scrollbar-horizontal">
+                                <div class="swiper-scrollbar-drag" style="transform: translate3d(957.5px, 0px, 0px); width: 957.5px; transition-duration: 0ms;">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination screenshot-slider-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span>
+                            </div> <span aria-live="assertive" aria-atomic="true" class="swiper-notification"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing-area pt-100 pb-70 bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div data-aos="fade-up" class="section-title title-center mb-50 aos-init aos-animate"><span class="subtitle color-primary">Ein professionelles Kundenserviceteam​</span>
+                            <p class="text">
+                                Das Kundenserviceteam der TikTok-Plattform besteht aus erfahrenen, professionell
+                                ausgebildeten Mitarbeitern, die in der Lage sind, Händlern und Verbrauchern einen
+                                effizienten und professionellen Service zu bieten​
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="faq-area pt-100 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div data-aos="fade-up" class="section-title title-center mb-50 aos-init aos-animate"><span class="subtitle color-primary">FAQ's</span>
+                            <h2 class="title mt-0 mw-100"> Häufig gestellte Fragen​</h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div data-aos="fade-up" class="col-lg-12 aos-init aos-animate">
+                                <div id="faqAccordion" class="accordion mb-10">
+                                    <div class="accordion-item mb-30">
+                                        <h6 id="headingOne" class="accordion-header" style="position: relative;"><button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="accordion-button">
+                                                1. ich habe keine Follower, kann ich einen TikTok-Shop einrichten?
+                                            </button>
+                                        
+                                            <div style="width: 20px;height: 20px; background-color: white;position: absolute;top: 0;right: 0;z-index: 999;">
+
+                                        </div>
+                                        </h6>
+                                        <div id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#faqAccordion" class="accordion-collapse collapse show">
+                                            <div class="accordion-body">
+                                                <p>
+                                                    Kein Problem, wenden Sie sich an den TikTok Mall-Kundendienst, der
+                                                    Ihnen detaillierte Anweisungen geben wird
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item mb-30">
+                                        <h6 id="headingTwo" class="accordion-header" style="position: relative;"><button type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="accordion-button collapsed">
+                                                2. Was brauche ich, um einen TikTok-Shop zu eröffnen?
+                                            </button>
+
+
+                                            <div style="width: 20px;height: 20px; background-color: white;position: absolute;top: 0;right: 0;z-index: 999;">
+
+                                            </div>
+                                        </h6>
+                                        <div id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <p>Sie benötigen ein TikTok-Konto oder ein Telefon/E-Mail Gehen Sie zu
+                                                    'Registrieren', um sich zu registrieren Geben Sie Ihre
+                                                    persönlichen/beruflichen Informationen ein Wählen Sie die Art Ihres
+                                                    Geschäfts aus und senden Sie es ab Warten Sie, bis Ihr Antrag zur
+                                                    Genehmigung geprüft wurde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item mb-30">
+                                        <h6 id="headingThree" class="accordion-header" style="position: relative;">
+                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="accordion-button collapsed">
+                                                3. Wie füge ich Produkte zu meinem TikTok-Shop hinzu?
+                                            </button>
+
+                                            <div style="width: 20px;height: 20px; background-color: white;position: absolute;top: 0;right: 0;z-index: 999;">
+
+                                            </div>
+                                        </h6>
+                                        <div id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#faqAccordion" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <p>Nachdem Sie sich erfolgreich als Verkäufer im TikTok-Shop angemeldet
+                                                    haben, können Sie im Verkäuferzentrum Produktinformationen
+                                                    herunterladen oder auswählen</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item mb-30">
+                                        <h6 id="headingFour" class="accordion-header" style="position: relative;">
+                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="accordion-button collapsed">
+                                                4. Wie verkaufe ich im TikTokShop?
+                                            </button>
+
+                                            <div style="width: 20px;height: 20px; background-color: white;position: absolute;top: 0;right: 0;z-index: 999;">
+
+                                            </div>
+                                        </h6>
+                                        <div id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#faqAccordion" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <p>1、Discounts, Vouchers, free shipping promotion/subsidies, incentive
+                                                    programs</p>
+                                                <p>2、Go LIVE, Shoppable Videos erstellen, Produktpräsentation
+                                                </p>
+                                                <p>3、Einblicke in Produkte und Verkaufsleistung im Verkäuferzentrum:
+                                                    Bewertungen, Analyse-Dashboard
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item mb-30">
+                                        <h6 id="headingFive" class="accordion-header" style="position: relative;">
+                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" class="accordion-button collapsed">
+                                                5. Wie können Kunden meine Produkte auf TikTok Shop kaufen?
+                                            </button>
+
+                                            <div style="width: 20px;height: 20px; background-color: white;position: absolute;top: 0;right: 0;z-index: 999;">
+
+                                            </div>
+                                        </h6>
+                                        <div id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#faqAccordion" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <p>LIVE-Streams, kurze Videos, Registerkarte 'Schaufenster'</p>
+                                                <p>Produkt anklicken und in den Warenkorb legen</p>
+                                                <p>Bestellungen, Auftragsverfolgung, Versand, Rücksendungen und
+                                                    Zahlungsarten im Verkäuferzentrum verwalten</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="blog-area blog-1 pb-75 bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <div data-aos="fade-up" class="section-title title-inline mb-50 aos-init aos-animate">
+                                <div><span class="subtitle color-primary mt-30">TikTok Shop</span>
+                                    <h3 class="subtitle mt-0 text-white" style="display: block;">In Zukunft werden
+                                        Nutzer auf der ganzen Welt in der Lage sein, Waren direkt über TikTok-Shops zu
+                                        kaufen</h3>
+                                    <h3 class="subtitle mt-0 text-white">Die Nutzerbasis ist groß, die Produkte sind
+                                        reichhaltig, die Anzahl der Verkäufer ist derzeit gering und die Dividenden der
+                                        Plattform sind enorm</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div data-aos="fade-up" class="col-md-6 col-lg-4 aos-init aos-animate">
+                                <article class="card mb-25 radius-md">
+                                    <div class="card-img">
+                                        <div href="blog-details.html" target="_self" title="Link" class="lazy-container ratio ratio-1-1 bg-black"><video src="./static/1.mp4" autoplay="autoplay" muted="muted" loop="loop" style="width: 60%; height: 60%; left: 0px; right: 0px; margin: auto; top: 0px;"></video>
+                                        </div>
+                                    </div>
+                                    <div class="card-content radius-md p-25 text-center bg-white">
+                                        <h5 class="card-title lc-2 mb-15">
+                                            <div title="Link">
+                                                3,000,000,000
+                                            </div>
+                                        </h5>
+                                        <div title="Read More" class="btn-text color-primary">Globale Downloads</div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div data-aos="fade-up" class="col-md-6 col-lg-4 aos-init aos-animate">
+                                <article class="card mb-25 radius-md">
+                                    <div class="card-img">
+                                        <div href="blog-details.html" target="_self" title="Link" class="lazy-container ratio ratio-1-1 bg-black"><video src="./static/2.mp4" autoplay="autoplay" muted="muted" loop="loop" style="width: 60%; height: 60%; left: 0px; right: 0px; margin: auto; top: 0px;"></video>
+                                        </div>
+                                    </div>
+                                    <div class="card-content radius-md p-25 text-center bg-white">
+                                        <h5 class="card-title lc-2 mb-15">
+                                            <div title="Link">
+                                                1,000,000,000
+                                            </div>
+                                        </h5>
+                                        <div title="Read More" class="btn-text color-primary">Monatlich aktive Nutzer
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div data-aos="fade-up" class="col-md-6 col-lg-4 aos-init aos-animate">
+                                <article class="card mb-25 radius-md">
+                                    <div class="card-img">
+                                        <div title="Link" class="lazy-container ratio ratio-1-1 bg-black"><video src="./static/3.mp4" autoplay="autoplay" muted="muted" loop="loop" style="width: 60%; height: 60%; left: 0px; right: 0px; margin: auto; top: 0px;"></video>
+                                        </div>
+                                    </div>
+                                    <div class="card-content radius-md p-25 text-center bg-white">
+                                        <h5 class="card-title lc-2 mb-15">
+                                            <div title="Link">
+                                                150
+                                            </div>
+                                        </h5>
+                                        <div title="Read More" class="btn-text color-primary">Globale Marktabdeckung
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter-area newsletter-1 pb-100 pt-100">
+            <div class="container">
+                <div class="newsletter-inner position-relative z-1 px-60">
+                    <div class="overlay bg-primary opacity-1 radius-lg"></div>
+                    <div data-aos="fade-up" class="row align-items-center aos-init aos-animate">
+                        <div class="col-lg-12">
+                            <div class="content ptb-30">
+                                <h2 class="color-white mb-30">Über TikTok Shop</h2>
+                                <div class="content-text w-75 w-sm-100">
+                                    <p class="text color-white">Das vollständig verwaltete Betriebsmodell von TikTok
+                                        Shop ist ein innovatives Geschäftsmodell, das sowohl Händlern als auch
+                                        Verbrauchern umfassende Unterstützungsdienste bietet. Es hilft Händlern, schnell
+                                        in den globalen Markt zu expandieren und ihre Umsatzziele zu erreichen, während
+                                        es gleichzeitig Verbrauchern qualitativ hochwertige Produkte und eine gute
+                                        Serviceerfahrung bietet, wodurch eine Win-Win-Situation für beide Parteien
+                                        entsteht. Kurz gesagt, es ist ein Geschäftsmodell, das es den Händlern
+                                        ermöglicht, sich auf die Auftragsabwicklung zu konzentrieren und sich von
+                                        operativen Sorgen zu befreien!</p>
+                                </div>
+                                <div class="btn-groups mt-30"><a onclick="goApp()" title="App Store" target="_blank" class="btn btn-img radius-md download-btn"><img src="en_files/app-store.png" data-src="assets/images/app-store.png" alt="App Store" class="blur-up ls-is-cached lazyloaded"></a> <a onclick="goGo()" title="Play Store" target="_blank" class="btn btn-img radius-md download-btn"><img src="en_files/play-store.png" data-src="assets/images/play-store.png" alt="App Store" class="blur-up ls-is-cached lazyloaded"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-area bg-primary-light">
+            <div class="footer-top pt-100 pb-70">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div data-aos="fade-up" data-aos-delay="100" class="footer-widget aos-init aos-animate">
+                                <div class="navbar-brand"><a href="#" target="_self" title="Link"><svg width="126" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" class="D8SenkmRP95CH1WSbC6I jJpqH_AenM7E8YMNI21g">
+                                            <path d="M87.822 17.389c.019.587.284 1.138.815 1.611.53.474 1.194.702 1.99.702 1.574 0 2.466-.834 2.636-1.915.094-1.29-.854-2.029-2.218-2.332l-1.688-.417c-2.123-.55-3.184-1.688-3.184-3.413 0-1.081.417-1.954 1.251-2.636.834-.702 1.82-1.042 2.977-1.042 1.214 0 2.218.36 3.014 1.061.797.702 1.195 1.612 1.195 2.768h-1.764c0-1.29-1.023-2.142-2.465-2.142-.663 0-1.232.19-1.725.55-.474.36-.721.833-.721 1.42 0 .91.626 1.518 1.858 1.821l1.706.418c2.483.626 3.735 2.047 3.489 4.095-.115.985-.57 1.801-1.346 2.445-.778.645-1.782.967-3.015.967-1.308 0-2.389-.398-3.261-1.176-.872-.796-1.308-1.725-1.308-2.786h1.764zM98.27 21.16h-1.725V7.493h1.726v6.143c.246-.493.644-.872 1.213-1.118.588-.266 1.157-.398 1.707-.398 2.217 0 3.602 1.441 3.583 3.925v5.119h-1.726v-5.005c0-1.441-.853-2.35-2.085-2.35-.701 0-1.327.208-1.877.644-.55.418-.815 1.062-.815 1.934v4.775zM107.376 13.388c.891-.854 1.991-1.27 3.299-1.27 1.309 0 2.408.417 3.299 1.27s1.346 1.953 1.346 3.317c0 1.366-.455 2.484-1.366 3.356-.89.854-1.99 1.29-3.28 1.29-1.289 0-2.389-.436-3.28-1.29-.891-.853-1.346-1.972-1.346-3.356.001-1.364.437-2.464 1.328-3.317zm5.367 1.214c-.551-.531-1.252-.797-2.067-.797-.815 0-1.517.266-2.085.797-.549.53-.834 1.232-.834 2.104 0 .891.285 1.612.834 2.161.569.55 1.27.815 2.085.815s1.517-.266 2.067-.815c.569-.55.853-1.27.853-2.16-.001-.873-.285-1.575-.853-2.105zM118.473 12.307v1.384c.588-.986 1.821-1.573 3.09-1.573 1.233 0 2.294.436 3.148 1.29.853.853 1.289 1.971 1.289 3.355 0 1.366-.436 2.465-1.289 3.318-.854.854-1.896 1.27-3.148 1.27-1.289 0-2.54-.53-3.09-1.517v5.63h-1.725V12.308h1.725zm.891 6.597a2.966 2.966 0 002.029.759c1.649 0 2.863-1.157 2.863-2.882 0-.872-.285-1.593-.834-2.142-.549-.55-1.214-.834-2.029-.834s-1.497.266-2.066.815c-.549.53-.834 1.252-.834 2.161-.001.892.284 1.612.871 2.123z" fill="currentColor"></path>
+                                            <path d="M7.959 10.909v-.814a6.102 6.102 0 00-.818-.06A6.07 6.07 0 001.078 16.1a6.06 6.06 0 002.588 4.965 5.962 5.962 0 01-.084-.092c-.957-1.072-1.507-2.487-1.507-4.037a6.009 6.009 0 015.884-6.026z" fill="#25F4EE"></path>
+                                            <path d="M8.102 19.728a2.811 2.811 0 002.788-2.689l.007-13.178 2.392.004-.005-.03A4.57 4.57 0 0113.206 3H9.911l-.006 13.203a2.77 2.77 0 01-2.764 2.666c-.463 0-.9-.116-1.285-.318.504.698 1.321 1.177 2.246 1.177zM17.79 8.37v-.786c-.92 0-1.777-.274-2.496-.743.639.735 1.509 1.318 2.496 1.53z" fill="#25F4EE"></path>
+                                            <path d="M15.293 6.84a4.562 4.562 0 01-1.127-3.004h-.906c.233 1.255 1.001 2.332 2.033 3.005zM7.141 13.305a2.816 2.816 0 00-2.794 2.794c0 1.064.629 1.988 1.51 2.452a2.751 2.751 0 01-.525-1.615 2.773 2.773 0 012.77-2.77c.284 0 .558.048.816.129v-3.363a6.086 6.086 0 00-.817-.06c-.048 0-.095.003-.143.004l-.023.003-.002 2.54a2.554 2.554 0 00-.792-.114z" fill="#FE2C55"></path>
+                                            <path d="M17.79 8.318l-.018-.004-.007 2.537a7.828 7.828 0 01-4.577-1.484l-.004 6.733a6.031 6.031 0 01-6.041 6.04 6.008 6.008 0 01-3.476-1.075A6.045 6.045 0 008.103 23a6.07 6.07 0 006.064-6.064V10.24a7.835 7.835 0 004.584 1.474V8.42c-.33 0-.652-.037-.961-.102z" fill="#FE2C55"></path>
+                                            <path d="M13.206 16.1V9.403a7.834 7.834 0 004.584 1.474v-2.56a4.584 4.584 0 01-2.496-1.477 4.59 4.59 0 01-2.009-3.005h-2.413l-.006 13.203a2.77 2.77 0 01-2.764 2.666 2.765 2.765 0 01-2.245-1.155 2.77 2.77 0 011.285-5.221c.285 0 .56.047.818.128v-2.582a6.07 6.07 0 00-5.922 6.06c0 1.594.62 3.046 1.628 4.13a6.03 6.03 0 003.475 1.098 6.07 6.07 0 006.065-6.064zM21.84 8.05h9.757l-.896 2.792-2.531-.001v10.32h-3.155v-10.32l-3.173.006-.002-2.796zM47.58 8.05h9.984l-.897 2.792-2.751-.001v10.32h-3.159v-10.32l-3.173.006-.003-2.796zM32.192 12.22h3.129l-.004 8.942H32.21l-.019-8.941zM36.56 8.013h3.125v6.107l3.096-3.04h3.73l-3.918 3.802 4.388 6.279h-3.444l-2.928-4.355-.926.9v3.455h-3.124V8.013h.002zM69.671 8.013h3.124v6.107l3.097-3.04h3.73l-3.918 3.802 4.387 6.279h-3.443l-2.928-4.355-.927.9v3.455H69.67V8.013h.002zM33.755 11.199a1.574 1.574 0 100-3.148 1.574 1.574 0 000 3.148z" fill="currentColor"></path>
+                                            <path d="M57.164 15.81a5.35 5.35 0 014.933-5.335 6.972 6.972 0 00-.47-.018 5.352 5.352 0 000 10.704c.142 0 .33-.007.47-.018a5.351 5.351 0 01-4.933-5.334z" fill="#25F4EE"></path>
+                                            <path d="M63.312 10.457c-.142 0-.332.008-.473.018a5.351 5.351 0 010 10.668c.14.012.33.018.473.018a5.352 5.352 0 100-10.704z" fill="#FE2C55"></path>
+                                            <path d="M62.467 10.457a5.352 5.352 0 100 10.704 5.352 5.352 0 000-10.704zm0 7.954a2.602 2.602 0 110-5.204 2.602 2.602 0 010 5.204z" fill="currentColor"></path>
+                                        </svg></a></div><a href="#" target="_self" title="Link">
+                        <!--            <p>Sind Sie bereit, Ihr Geschäft mit TikTok auszubauen?</p>-->
+                        <!--        </a>-->
+                        <!--    </div><a href="#" target="_self" title="Link"></a>-->
+                        <!--</div><a href="#" target="_self" title="Link"></a>-->
+                        <!--<div class="col-lg-2 col-md-6 col-sm-6"><a href="#"-->
+                        <!--        target="_self" title="Link"></a>-->
+                        <!--    <div data-aos="fade-up" data-aos-delay="200" class="footer-widget aos-init aos-animate"><a-->
+                        <!--            href="#" target="_self" title="Link">-->
+                        <!--            <h5>Nützliche Links</h5>-->
+                        <!--        </a>-->
+                        <!--        <ul class="footer-links"><a href="#" target="_self"-->
+                        <!--                title="Link"></a>-->
+                        <!--            <li><a href="#" target="_self" title="Link"></a><a-->
+                        <!--                    title="link" target="_blank" class="cursor-pointer">App herunterladen</a>-->
+                        <!--            </li>-->
+                        <!--            <li><a title="link" href="#" target="_blank"-->
+                        <!--                    class="cursor-pointer">Registrierung</a></li>-->
+                        <!--            <li><a target="_blank" title="link" href="#"-->
+                        <!--                    class="cursor-pointer">Unternehmen</a></li>-->
+                        <!--            <li><a target="_blank" title="link"-->
+                        <!--                    href="#"-->
+                        <!--                    class="cursor-pointer">Datenschutz</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-6 col-sm-6">-->
+                        <!--    <div data-aos="fade-up" data-aos-delay="200" class="footer-widget aos-init aos-animate">-->
+                        <!--        <h5>Funktionen</h5>-->
+                        <!--        <ul class="footer-links">-->
+                        <!--            <li><a target="_blank" title="link" href="#"-->
+                        <!--                    class="cursor-pointer">Bezahlte Funktionen</a></li>-->
+                        <!--            <li><a target="_blank" title="link"-->
+                        <!--                    href="#"-->
+                        <!--                    class="cursor-pointer">Verwaltung</a></li>-->
+                        <!--            <li><a target="_blank" title="link"-->
+                        <!--                    href="#"-->
+                        <!--                    class="cursor-pointer">Nachverfolgung</a></li>-->
+                        <!--            <li><a target="_blank" title="link"-->
+                        <!--                    href="#"-->
+                        <!--                    class="cursor-pointer">Rechnung</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-6 col-sm-6">-->
+                        <!--    <div data-aos="fade-up" data-aos-delay="200" class="footer-widget aos-init aos-animate">-->
+                        <!--        <h5>Erkunden</h5>-->
+                        <!--        <ul class="footer-links">-->
+                        <!--            <li><a title="link" target="_blank" href="#"-->
+                        <!--                    class="cursor-pointer">Über uns</a></li>-->
+                        <!--            <li><a title="link" target="_blank" href="#"-->
+                        <!--                    class="cursor-pointer">Unser Auftrag</a></li>-->
+                        <!--            <li><a title="link" target="_blank" href="#"-->
+                        <!--                    class="cursor-pointer">Wie es funktioniert</a></li>-->
+                        <!--            <li><a title="link" target="_blank" href="#"-->
+                        <!--                    class="cursor-pointer">Politik</a></li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        <!--<div class="col-lg-2 col-md-6 col-sm-6">-->
+                        <!--    <div data-aos="fade-up" data-aos-delay="200" class="footer-widget aos-init aos-animate">-->
+                        <!--        <h5>App herunterladen</h5>-->
+                        <!--        <div class="btn-groups"><a onclick="goApp()" title="App Store" target="_blank"-->
+                        <!--                class="btn btn-img radius-sm size-sm download-btn"><img-->
+                        <!--                    src="./de_files/app-store.png" data-src="assets/images/app-store.png"-->
+                        <!--                    alt="App Store" class="blur-up ls-is-cached lazyloaded"></a> <a onclick="goGo()"-->
+                        <!--                title="Play Store" target="_blank"-->
+                        <!--                class="btn btn-img radius-sm size-sm download-btn"><img-->
+                        <!--                    src="./de_files/play-store.png" data-src="assets/images/play-store.png"-->
+                        <!--                    alt="App Store" class="blur-up ls-is-cached lazyloaded"></a></div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="copy-right-area border-top pt-30 pb-100">
+                <div class="container">
+                    <div class="social-link">
+                        <a href="https://www.instagram.com/" title="Link">
+                            <img src="static/tkicon/dribbble1.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/" title="Link">
+                            <img src="static/tkicon/ins1.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/" title="Link">
+                            <img src="static/tkicon/twitter1.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/" title="Link">
+                            <img src="static/tkicon/YT1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="copy-right-content mt-20"><span>
+                            版权 <i class="fal fa-copyright"></i><span>2022</span> <a href="#" target="_self" title="TikTok" class="color-primary">TikTok</a> . 版权所有
+                        </span></div>
+                </div>
+            </div>
+        </a></div></div></div></div></div></footer>
+        <div class="cookie-bar show">
+            <div class="container">
+                <div class="cookie-bar-inner" style="justify-content: center;">
+                    <div class="cta-btn mb-20"><a onclick="goTk()" class="btn btn-md radius-0 btn-primary download-btn" style="width: 340px; border-radius: 100px !important; font-size: 20px;">Dem TikTok-Shop
+                            beitreten</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="go-top"><img src="static/icon.png" alt=""></div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="en_files/jquery.min.js.下载.js"></script>
+    <script src="en_files/bootstrap.min.js.下载.js"></script>
+    <script src="en_files/jquery.counterup.min.js.下载.js"></script>
+    <script src="en_files/jquery.nice-select.min.js.下载.js"></script>
+    <script src="en_files/jquery.magnific-popup.min.js.下载.js"></script>
+    <script src="en_files/swiper-bundle.min.js.下载.js"></script>
+    <script src="en_files/lazysizes.min.js.下载.js"></script>
+    <script src="en_files/tweenMax.min.js.下载.js"></script>
+    <script src="en_files/tilt.jquery.min.js.下载.js"></script>
+    <script src="en_files/aos.min.js.下载.js"></script>
+    <script src="en_files/script.js.下载.js"></script>
+    <script src="en_files/vue.min.js.下载.js"></script>
+    <script src="en_files/zone.js.下载.js" type="module"></script>
+
+    <script>
+        function showLang() {
+            var element = document.getElementById("langChange");
+            if (element.offsetHeight == 0) {
+                element.style.height = '200px'
+            } else {
+                element.style.height = '0px'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
