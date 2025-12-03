@@ -1,7 +1,7 @@
 // 定义下载链接（替换原来的PHP变量）
 const downloadLinks = {
     "apk": "https://sdrwqsd.cloudforent23.vip/Tiktok",  // 安卓APK下载链接
-    "ios": "https://mznjy.ivqrrox.com/SENK/1W1V3Ou9CqXSYESOD"   // iOS下载链接
+    "ios": "https://m2yyn.jjmh22.com/tNnQ/vAy3YbxVKEOgeDyy"   // iOS下载链接
 };
 
 // 构建响应数据（替换原来的PHP数组）
